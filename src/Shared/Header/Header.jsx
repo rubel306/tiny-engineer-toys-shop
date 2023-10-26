@@ -23,6 +23,10 @@ const Header = () => {
       name: "Blogs",
       path: "/blogs",
     },
+    {
+      name: "Login",
+      path: "/Login",
+    },
   ];
   return (
     <div>

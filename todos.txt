@@ -11,7 +11,7 @@ A company is seeking a web developer who can create a simple full-stack Toy Mark
     - Disney dolls (Disney princes, frozen dolls, animation characters, donald duck, etc.), 
     - Girls' makeup toy, 
     - Video game toys, 
-    - Building and Construction Toys, 
+    - Building and Construction Toys, ==> choose this category
     - Educational and Learning Toys(science kits, math learning toys, engineering kits, engineering tools), 
     - Cooking Toys, 
     - Arts and Crafts Toys, 
@@ -54,16 +54,14 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
     **If any similarities are found, you will get zero(0) as a penalty.**
 
-<br/>
 
-2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**. Create a reasonable and meaningful footer. <b>(including website logo, name, copyright, some contact information, social media links, address, etc.)</b>
+2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**. Create a reasonable and meaningful footer. <b>(including website logo, name, copyright, some contact information, social media links, address, etc.)</b> ==> done 
 
-<br/>
 
-3. Your website should have a navbar with the **Website logo, Website name, Home, All Toys, My Toys, Add A Toy, Blogs,** and **User profile picture**. 
+3. Your website should have a navbar with the **Website logo, Website name, Home, All Toys, My Toys, Add A Toy, Blogs,** and **User profile picture**.  ==> done
+
     > **Note:** The **User profile picture, Add A Toy** and **My Toys** on the navbar are conditional based on login. If the user is logged in, the navbar will show the profile picture; otherwise, it will show the **Login button**. If the username is available, the user's name will be visible when the mouse hovers over the profile picture.
 
-<br/>
 
 4. **`Login & Registration systems:`** On the Registration and Login pages, display relevant error messages when necessary.
 

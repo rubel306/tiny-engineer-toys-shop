@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
-  const { logIn } = useContext(AuthContext);
+  const { logIn, logInPopUp } = useContext(AuthContext);
   const [logError, setLogError] = useState(null);
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -20,6 +20,15 @@ const Login = () => {
       })
       .catch((error) => setLogError(error.message));
   };
+
+  //handle popup login
+  const popUpLogin = () => {
+    logInPopUp().then((result) => {
+      const LoggedUser = result.user;
+      navigate("/");
+    });
+  };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -72,7 +81,10 @@ const Login = () => {
           <h2 className="text-black font-bold text-3xl py-4 mt-8">
             Login in With
           </h2>
-          <Link className="text-center mx-auto flex justify-between items-center border rounded-lg border-gray-500 p-4 w-72 mb-8">
+          <Link
+            onClick={popUpLogin}
+            className="text-center mx-auto flex justify-between items-center border rounded-lg border-gray-500 p-4 w-72 mb-8"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="31"

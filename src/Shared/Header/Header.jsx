@@ -70,8 +70,8 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              {navItems.map((nav) => (
-                <li>
+              {navItems.map((nav, i) => (
+                <li key={i}>
                   <Link to={nav.path}>{nav.name}</Link>
                 </li>
               ))}

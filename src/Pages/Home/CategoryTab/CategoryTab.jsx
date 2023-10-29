@@ -9,9 +9,9 @@ const CategoryTab = () => {
     setActiveTab(tab);
   };
   useEffect(() => {
-    fetch("data.json")
+    fetch("http://localhost:5000/cattoys")
       .then((res) => res.json())
-      .then((data) => setDatas(data.subCategories));
+      .then((data) => setDatas(data));
   }, []);
   const filteredData = datas.filter((data) => data.category === activeTab);
 
@@ -28,25 +28,24 @@ const CategoryTab = () => {
       </TabList>
 
       <TabPanel style={{ display: "grid" }} className="grid grid-cols-3 gap-4">
-        {filteredData.map((cat) => {
+        {filteredData.map((product, i) => (
+          <TabDetails key={i} product={product}></TabDetails>
+        ))}
+        {/* {filteredData.map((cat) => {
           return cat.products.map((product, i) => (
             <TabDetails key={i} product={product}></TabDetails>
           ));
-        })}
+        })} */}
       </TabPanel>
       <TabPanel style={{ display: "grid" }} className="grid grid-cols-3 gap-4">
-        {filteredData.map((cat) => {
-          return cat.products.map((product, i) => (
-            <TabDetails key={i} product={product}></TabDetails>
-          ));
-        })}
+        {filteredData.map((product, i) => (
+          <TabDetails key={i} product={product}></TabDetails>
+        ))}
       </TabPanel>
       <TabPanel style={{ display: "grid" }} className="grid grid-cols-3 gap-4">
-        {filteredData.map((cat) => {
-          return cat.products.map((product, i) => (
-            <TabDetails key={i} product={product}></TabDetails>
-          ));
-        })}
+        {filteredData.map((product, i) => (
+          <TabDetails key={i} product={product}></TabDetails>
+        ))}
       </TabPanel>
     </Tabs>
   );

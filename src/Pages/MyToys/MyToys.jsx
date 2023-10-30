@@ -5,7 +5,7 @@ import TableRow from "./TableRow";
 
 const MyToys = () => {
   const { user, loading, setLoading } = useContext(AuthContext);
-  const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     if (user) {
       setLoading(true);
@@ -13,7 +13,7 @@ const MyToys = () => {
     fetch(`http://localhost:5000/products?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        setProducts(data);
         setLoading(false);
       });
   }, [user]);
@@ -25,7 +25,6 @@ const MyToys = () => {
     <div className="">
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
           <thead>
             <tr>
               <th>Name</th>
@@ -39,8 +38,13 @@ const MyToys = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((product) => (
-              <TableRow key={product._id} product={product}></TableRow>
+            {products.map((product) => (
+              <TableRow
+                products={products}
+                setProducts={setProducts}
+                key={product._id}
+                product={product}
+              ></TableRow>
             ))}
           </tbody>
         </table>

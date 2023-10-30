@@ -1,7 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 
-const TableRow = ({ product }) => {
+const TableRow = ({ product, products, setProducts }) => {
   const {
     name,
     price,
@@ -34,6 +34,8 @@ const TableRow = ({ product }) => {
             if (data.acknowledged === true) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
+            const remaining = products.filter((product) => product._id !== id);
+            setProducts(remaining);
             console.log(data);
           });
       }

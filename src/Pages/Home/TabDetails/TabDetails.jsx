@@ -8,7 +8,7 @@ const TabDetails = ({ product }) => {
   const { _id, name, price, picture, rating } = product;
   return (
     <div className="my-4 text-center">
-      <img className="w-80 h-80" src={picture} alt="" />
+      <img className="w-80 h-80 mx-auto" src={picture} alt="" />
       <h2 className="font-semibold text-2xl my-2">{name}</h2>
       <p className="text-themeYellow font-semibold my-2 font-lg">${price}</p>
       <Rating

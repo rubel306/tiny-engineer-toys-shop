@@ -175,7 +175,10 @@ const AddToy = () => {
               </div>
 
               <div className="form-control mt-6  col-span-2">
-                <button type="submit" className="btn btn-primary">
+                <button
+                  type="submit"
+                  className="rounded-lg text-white px-8 py-3 font-semibold bg-themeYellow hover:bg-[#000]"
+                >
                   Add A Toy
                 </button>
               </div>

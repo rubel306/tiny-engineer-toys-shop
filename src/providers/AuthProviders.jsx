@@ -52,7 +52,15 @@ const AuthProviders = ({ children }) => {
     return signOut(auth);
   };
 
-  const authInfo = { user, loading, signIn, logIn, logInPopUp, logOut };
+  const authInfo = {
+    user,
+    loading,
+    setLoading,
+    signIn,
+    logIn,
+    logInPopUp,
+    logOut,
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

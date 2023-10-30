@@ -9,11 +9,11 @@ const CategoryTab = () => {
     setActiveTab(tab);
   };
   useEffect(() => {
-    fetch("http://localhost:5000/cattoys")
+    fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
-  const filteredData = datas.filter((data) => data.category === activeTab);
+  const filteredData = datas.filter((data) => data.subCategory === activeTab);
 
   return (
     <Tabs className="my-8">

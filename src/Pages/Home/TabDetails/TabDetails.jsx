@@ -21,9 +21,9 @@ const TabDetails = ({ product }) => {
       <p className="mb-8">{rating}</p>
       <Link
         className="rounded-lg text-white px-8 py-3 font-semibold bg-themeYellow hover:bg-[#000]"
-        to={`toys/${_id}`}
+        to={`/toys/${_id}`}
       >
-        Buy Now
+        More Details
       </Link>
     </div>
   );

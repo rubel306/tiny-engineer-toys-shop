@@ -6,6 +6,9 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <h2 className="text-center text-3xl font-bold my-8 text-themeYellow">
+        Shop by category
+      </h2>
       <CategoryTab></CategoryTab>
     </div>
   );

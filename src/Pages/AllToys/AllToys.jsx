@@ -4,7 +4,7 @@ import TabDetails from "../Home/TabDetails/TabDetails";
 const AllToys = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/cattoys")
+    fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

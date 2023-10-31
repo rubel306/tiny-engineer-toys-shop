@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const TableRow = ({ product, products, setProducts }) => {
@@ -60,9 +61,12 @@ const TableRow = ({ product, products, setProducts }) => {
       <td>{subCategory}</td>
       <td>{description}</td>
       <td>
-        <button className="rounded-lg text-white px-8 py-3 font-semibold bg-[#7ab317] hover:bg-[#000] mb-4">
+        <Link
+          to={`/products/${_id}`}
+          className="rounded-lg text-white px-8 py-3 font-semibold bg-[#7ab317] hover:bg-[#000] mb-4 block"
+        >
           Edit
-        </button>
+        </Link>
         <button
           onClick={() => handleDelete(_id)}
           className="rounded-lg text-white px-8 py-3 font-semibold bg-[#d31900] hover:bg-[#000]"

@@ -10,6 +10,7 @@ import SingleProduct from "../Layouts/SingleProduct";
 import PrivateRoute from "../providers/PrivateRoute";
 import AddToy from "../Pages/AddToy/AddToy";
 import MyToys from "../Pages/MyToys/MyToys";
+import UpdateToys from "../Pages/UpdateToys/UpdateToys";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
       {
         path: "/my-toys",
         element: <MyToys></MyToys>,
+      },
+      {
+        path: "/products/:id",
+        element: <UpdateToys></UpdateToys>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
       },
       {
         path: "/register",

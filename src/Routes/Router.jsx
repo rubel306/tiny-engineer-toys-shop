@@ -11,6 +11,7 @@ import PrivateRoute from "../providers/PrivateRoute";
 import AddToy from "../Pages/AddToy/AddToy";
 import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToys from "../Pages/UpdateToys/UpdateToys";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
     ],
   },
